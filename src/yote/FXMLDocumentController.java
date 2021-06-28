@@ -20,6 +20,7 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML
     private Label label;
+    public static FXMLDocumentController referencia;
     
     @FXML
     private void handleButtonAction(ActionEvent event) {
@@ -30,6 +31,11 @@ public class FXMLDocumentController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        referencia = this;
     }    
+    
+    public void setText(String t){
+        label.setText(t);
+    }
     
 }
